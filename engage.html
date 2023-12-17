@@ -6,34 +6,6 @@
 <title>Authentic Sporting Arrangements</title>
 
 
-form {
-  font-family: Arial, sans-serif;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type=email], input[type=tel], textarea {
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input[type=submit] {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-}
-
-
-
-
-
-
-
-  
 
 <style>
 body, html {
@@ -386,9 +358,8 @@ footer {
 </header>
 
 
-</section>
 <main>
-<h2>Our Process</h2>
+    <h2>Our Process</h2>
 <p class="custom-text">ASA is where your dream sporting adventure begins. Our tailored process ensures a seamless and unforgettable experience. Here's how we do it:</p>
 
 <h3>You Request Your Consultation</h3>
@@ -411,62 +382,8 @@ footer {
 
 <h3>You Receive Your Trophies and Submit Your Feedback</h3>
 <p class="custom-text">Your trophies will be delivered to your home, and we welcome your feedback in a post-trip session to continually refine and enhance our services.</p>
-</section>
-
-
-<main>
-  <h2 style="text-align: center; margin-bottom: 20px;">Request Consultation</h2>
-  <form id="contactForm" onsubmit="return validateForm()" style="max-width: 600px; margin: auto;">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="example@email.com" required style="width: 100%; padding: 8px;">
-    </div>
-    <div id="successMessage" style="display:none;" class="alert">
-      <p>Thank you for contacting us! We have received your information and a team member will be in touch shortly.</p>
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone Number (optional):</label>
-      <input type="tel" id="phone" name="phone" placeholder="+39 351 6012777" pattern="\+[0-9\s]+" title="Phone number must start with a '+' and include the country code and optional spaces" style="width: 100%; padding: 8px;">
-    </div>
-    <div class="form-group">
-      <label for="message">Message (optional):</label>
-      <textarea id="message" name="message" placeholder="Feel free to share any specific details regarding your request." style="width: 100%; padding: 8px;"></textarea>
-    </div>
-    <input type="submit" value="Submit" style="background-color: black; color: white; padding: 10px 20px; border: none; cursor: pointer;">
-  </form>
 </main>
 
-
-
-
-
-  
-<script>
-function validateForm() {
-  var email = document.getElementById('email').value;
-  var phone = document.getElementById('phone').value;
-
-  if (!email) {
-    alert('Please enter your email address.');
-    return false;
-  }
-
-  var phonePattern = /^\+\d+(\s\d+)*$/;
-  if (phone && !phone.match(phonePattern)) {
-    alert('Phone number must start with a "+" and include the country code, optionally separated by spaces.');
-    return false;
-  }
-
-  // Hide the form and show the success message
-  document.getElementById('contactForm').style.display = 'none';
-  document.getElementById('successMessage').style.display = 'block';
-
-  return false; // Prevents the form from submitting traditionally
-}</script>
-
-
-
-  
 
 <footer>
   <div class="footer-top">
