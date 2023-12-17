@@ -139,6 +139,46 @@ footer {
 
 
 
+  /* Styles for contact form (default) */
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type='text'], input[type='email'], input[type='tel'], textarea {
+  width: 100%; /* Adjusted for full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type='submit'] {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  display: block; /* To make it a block element */
+}
+input[type='submit']:hover {
+  background-color: #555;
+}
+.alert {
+  padding: 20px;
+  background-color: #f8f8f8; 
+  color: #333; 
+  margin-top: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  display: none; /* Initially hidden */
+}
+
+
+
+
+  
+
 
 
   /* Responsive styles for desktop screens */
@@ -298,6 +338,37 @@ footer {
 </style>
 
 
+
+  
+<script>
+function validateForm() {
+  console.log('Validating form...');
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+
+  if (!email) {
+    alert('Please enter your email address.');
+    return false;
+  }
+
+  var phonePattern = /^\+\d+(\s\d+)*$/;
+  if (phone && !phone.match(phonePattern)) {
+    alert('Phone number must start with a "+" and include the country code, optionally separated by spaces.');
+    return false;
+  }
+
+  console.log('Form is valid. Showing success message...');
+  document.getElementById('contactForm').style.display = 'none'; // Hides the form
+  document.getElementById('successMessage').style.display = 'block'; // Shows the success message
+
+  return false; // Prevent the actual form submission
+}
+</script>
+
+
+
+  
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.menu-toggle').addEventListener('click', function () {
@@ -389,6 +460,33 @@ footer {
 <p class="custom-text">Your trophies will be delivered to your home, and we welcome your feedback in a post-trip session to continually refine and enhance our services.</p>
 </main>
 
+
+<!-- Contact Form Section -->
+<section id="contact" class="container">
+  <h2>Request Consultation</h2>
+  <form id="contactForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    </div>
+    <div id="successMessage" style="display:none;" class="alert">
+      <p>Thank you for contacting us! Your information has been well received, and a dedicated team member will contact you via your preferred details shortly.</p>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number (optional):</label>
+      <input type="tel" id="phone" name="phone" placeholder="+39 351 6012777"
+      pattern="\+[0-9\s]+" title="Phone number must start with a '+' and include the country code and optional spaces">
+    </div>
+    <div class="form-group">
+      <label for="message">Message (optional):</label>
+      <textarea id="message" name="message" placeholder="Feel free to share any specific details regarding your request."></textarea>
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+
+  
 
 <footer>
   <div class="footer-top">
