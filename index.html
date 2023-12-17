@@ -212,15 +212,18 @@ main h2 {
     .header-content {
       flex-direction: column;
     }
-header h1{
-    text-align: center; /* Optional: if you want to center-align each word */
-    font-size: 22px; margin-left: 0px; margin-right: 0px; font-weight: bold;
+header h1 {
+    order: 1; /* Title first */
+    text-align: center;
+    font-size: 22px; /* Adjust font size as needed */
   }
-    #logo {
-        max-height: 100px; /* Smaller logo for mobile */
-        width: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Adjust if needed */
-    }
+     #logo {
+    order: 2; /* Logo second */
+    max-height: 100px; /* Adjust size as needed */
+    width: auto; /* Maintain aspect ratio */
+    align-self: center; /* Center the logo */
+    margin-bottom: 1rem; /* Add some margin at the bottom of the logo */
+  }
     h2 {
   text-align: left; margin-top: 20px; margin-bottom: 20px /* or any other default alignment */
   /* other styles */
@@ -229,12 +232,12 @@ body {
       font-size: 18px; line-height:;
     }
     .menu-toggle {
-      display: block;
-      position: absolute; /* Position it at the top right */
-      top: 0;
-      right: 0;
-      padding: 1rem 2rem;
-    }
+    order: 3; /* Menu toggle third */
+    position: static; /* Reset any absolute positioning */
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    width: 100%; /* Full width for easier touch */
+    text-align: center; /* Center the menu icon */
+  }
  .custom-text {
     margin-left: 0px; /* Adjust this value as needed for mobile */
 margin-right: 0px; text-align: justify;
