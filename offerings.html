@@ -1,1 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authentic Sporting Arrangements</title>
 
+
+
+<style>
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.image-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: opacity 1s linear;
+}
+
+  /* Reset and base styles */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body {
+    font-family: 'Times New Roman', serif;
+    line-height: 2.0;
+    color: #333;
+    background: #fff;
+    text-align: justify;
+  }
+
+  /* Header styles */
+.custom-text {
+    margin-left: 40px; /* Adjust as needed */
+    font-family: 'Times New Roman', serif;
+    line-height: 2.0;
+    color: #333;
+    background: #fff;
+    text-align: justify;
+    /* Add any other styles you wish to apply */
+    margin-right: 40px;
+}
+
+ header {
+    background: #00412d;
+    color: white;
+    padding: 1rem 0;
+  }
+#nav {
+      display: block; /* Initially hide the navigation */
+    }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin: 0;   }
+
+  /* Navigation styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+
+ nav a:hover, nav a:focus {
+        background-color: transparent; /* Remove background color on hover */
+        color: #00ff00; /* Change text color on hover to the current color of the box */
+    }
+
+  /* Hamburger menu */
+  .menu-toggle {
+    display: none;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 2rem;
+  }
+
+  /* Footer styles */
+footer {
+  background: #00412d;
+  color: white;
+  padding: 1.5rem 2rem; /* Match the left and right padding to the main content */
+  text-align: left;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+  /* Remove flex-basis and margin-left properties if they are not needed */
+  padding: 20px; /* Remove padding to align with the main content */
+  font-size: 18px;
+}
+
+.footer-bottom {
+  font-size: 18px;
+  padding: 20px; /* Align the bottom text with the rest of the content */
+}
+
+  /* Styles for mobile screens (default) */
+  #logo {
+      max-height: 200px;
+      margin-right: 0;
+      margin-bottom: -20px;
+  }
+
+
+
+
+
+  /* Responsive styles for desktop screens */
+  @media (min-width: 768px) {
+  .header-content, .footer-top, .footer-bottom, main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+.header-content, .footer-top, .footer-bottom {
+  padding-left: 40px; /* Match with main content */
+}
+body {
+      font-size: 20px; /* This increases the base font size for desktop */
+    }
+     header h1 {
+      font-size: 2.5rem; line-height: 2.5; margin-left: 20px;/* Adjust the header font size as needed */
+    }
+
+header:hover #nav {
+        display: block; /* Show navigation when header is hovered */
+      }
+#logo {
+    max-height: 200px;
+    position: absolute;
+    top: -15px;  /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+footer {
+    text-align: left;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+
+  .footer-section {
+    margin-left: 0px; /* Reset the margin for desktop */
+    flex-basis: calc(33.333% - 40px); /* Adjust the width of each column, subtracting any margins or paddings you want to account for */
+    padding: 0px; font-size: 18px; margin-left: -30px;
+  }
+
+  .footer-bottom {
+    padding-top: 0px; margin-left: 0px; font-size: 18px; padding: 10px;
+  }
+
+  .footer-bottom p {
+    margin-top: 0; /* Adjust the margin as needed */
+  }
+main h2 {
+      font-size: 30px; margin-left: 40px; margin-top: 20px; margin-bottom: 20px   }
+
+    nav a {
+        font-size: 20px;
+        margin-left: 50px;
+        background-color: transparent; /* Ensures no background color */
+        color: white; /* Default text color */
+        padding: 5px;    }
+
+    
+  }
+
+
+
+
+
+  /* Responsive styles for mobile screens */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+    }
+header h1{
+    text-align: center; /* Optional: if you want to center-align each word */
+    font-size: 22px; margin-left: 0px; margin-right: 0px; font-weight: bold;
+  }
+    #logo {
+        max-height: 150px; /* Smaller logo for mobile */
+        width: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Adjust if needed */
+        margin-top: -10.0; /* Adjust if needed */
+    }
+    h2 {
+  text-align: left; margin-top: 20px; margin-bottom: 20px /* or any other default alignment */
+  /* other styles */
+}
+body {
+      font-size: 18px; line-height:;
+    }
+    .menu-toggle {
+      display: block;
+      position: absolute; /* Position it at the top right */
+      top: 0;
+      right: 0;
+      padding: 1rem 2rem;
+    }
+ .custom-text {
+    margin-left: 0px; /* Adjust this value as needed for mobile */
+margin-right: 0px; text-align: justify;
+  }
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+
+    nav.active ul {
+      display: flex;
+    }
+
+    nav a {
+  font-size: 20px; /* Set your desired font size for mobile here */
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+
+footer {
+    background: #00412d;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .footer-top {
+    display: flex; /* Turn footer-top into a flex container */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+    justify-content: space-between; /* Distribute space between the items */
+    text-align: left;
+  }
+
+  .footer-section {
+    flex: 1; /* Make footer sections grow and take up equal space */
+    margin-bottom: 1rem;
+    font-size: 18px; 
+    text-align: left;
+    min-width: 50%; /* Ensure they don't shrink below 50% width */
+  }
+
+  .footer-bottom {
+    text-align: left;
+    padding-top: 0;
+    font-size: 18px;
+  }
+    nav {
+      order: 2; /* Ensure nav is below the title when active */
+    }
+  }
+</style>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  });
+</script>
+</head>
+<script>
+  let currentImageIndex = 0;
+  const images = [
+    "DSC04360.jpeg",
+    "hyena.jpeg",
+    "lioness.jpeg",
+    "elephant.jpeg",
+    "crocodile.jpeg",
+    "wilderbeast.jpeg",
+    "zebras.jpeg",
+    "waterbuck.jpeg"
+  ];
+
+ function showNextImage() {
+    const imageContainer = document.getElementById('adventure-image-img');
+    imageContainer.classList.remove('show');
+    
+    // Update the data-src attribute instead of src for lazy loading
+    imageContainer.setAttribute('data-src', images[currentImageIndex]);
+    
+    // Load the image and add 'show' class when it's loaded
+    const loadImage = (image) => {
+        image.src = image.dataset.src;
+        image.onload = () => image.classList.add('show');
+    };
+
+    setTimeout(() => loadImage(imageContainer), 50);
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    setTimeout(showNextImage, 8000);
+}
+
+  window.onload = function() {
+    showNextImage();
+  };
+</script>
+<body>
+
+
+
+<header>
+  <div class="header-content">
+    <img src="logo.png" alt="ASA Logo" id="logo">
+    <h1>Authentic Sporting Arrangements</h1>
+  </div>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="offerings.html">Our Offerings</a></li>
+      <li><a href="engage.html">Engage with ASA</a></li>
+      <li><a href="excellence.html">Excellence and Privacy</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <h2>Bespoke Adventures</h2>
+    <p class="custom-text">At ASA, we are dedicated to creating distinct and memorable adventures tailored to your interests. If your heart races at the thought of a challenging hunting experience, seeking out game in the diverse landscapes of Africa, we are here to guide you. For those drawn to the thrill of fishing, our customized expeditions promise unmatched excitement in some of the continent's most bountiful waters. Alternatively, if you are enchanted by the idea of a safari, exploring the wild beauty and observing the majestic wildlife of the African savannah, we offer specialized tours that promise a once-in-a-lifetime experience. Each journey with ASA is a unique adventure, meticulously crafted to fulfill your individual desires.</p>
+    
+    <h2>Trusted Partnerships</h2>
+    <p class="custom-text">Our service excellence is rooted in our vast network of trusted local outfitters and guides. We collaborate closely with these seasoned experts to elevate your African sporting adventures, ensuring they are not only memorable but also authentically immersive. Our long-established connections with outfitters across Africa's diverse landscapes provide you with unparalleled insight and access to the continent's most coveted sporting locations. This network, underpinned by trusted partnerships, is key to delivering truly exceptional experiences.</p>
+
+    <h2>Personalized Service</h2>
+    <p class="custom-text">At ASA, we recognize that each sporting adventure is a personal odyssey, tailored to your specific needs and desires. We cater to those with demanding schedules, offering the flexibility needed to accommodate a busy calendar. From your initial inquiry, a dedicated ASA consultant will collaborate closely with you to craft a bespoke itinerary that resonates with your vision. Our commitment to personalized, one-on-one interactions is at the forefront of our service, ensuring that your adventure is more than just a trip – it’s an unforgettable experience uniquely designed for you.</p>
+  </section>
+</main>
+
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-section">
+      <h3>UK Contact</h3>
+      <p>London road<br>
+      London post code<br>
+      United Kingdom</p>
+    </div>
+    <div class="footer-section">
+      <h3>EU Contact</h3>
+      <p>Landhausgasse 1<br>
+      5020 Salzburg<br>
+      Austria</p>
+    </div>
+    <div class="footer-section">
+      <h3>Impressum</h3>
+      <p>Authentic Sporting Arrangements (ASA)<br> 
+      Landhausgasse 1, 5020 Salzburg, Austria<br>
+      +39 351 6012777 | strasser.christoph@studbocconi.it<br>
+      Commercial Register | Tax ID</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright © 2023 Authentic Sporting Arrangements. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
