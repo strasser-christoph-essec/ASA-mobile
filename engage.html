@@ -187,7 +187,12 @@ input[type='submit']:hover {
     padding-left: 0;
     padding-right: 0;
   }
-.header-content, .footer-top, .footer-bottom {
+main, #contact { /* Apply the same padding to the contact section */
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+    
+    .header-content, .footer-top, .footer-bottom {
   padding-left: 40px; /* Match with main content */
 }
 body {
@@ -294,7 +299,10 @@ margin-right: 0px; text-align: justify;
     nav.active ul {
       display: flex;
     }
-
+.form-group {
+  margin-bottom: 20px;
+}
+    
     nav a {
   font-size: 20px; /* Set your desired font size for mobile here */
   text-align: center;
