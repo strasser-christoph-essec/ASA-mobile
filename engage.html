@@ -311,6 +311,20 @@ margin-right: 0px; text-align: justify;
   display: block;
 }
 
+#contact {
+    max-width: 100%; /* Maximum width */
+    padding-left: 40px; padding-right: 40px; /* Padding on left and right */
+    margin: 0 auto; /* Centering the form */
+  }
+
+  .form-group input[type='text'], 
+  .form-group input[type='email'], 
+  .form-group input[type='tel'], 
+  .form-group textarea {
+    width: calc(100% - 20px); /* Adjusting width to account for padding */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  }
+    
 
 footer {
     background: #00412d;
@@ -490,7 +504,7 @@ function validateForm() {
       <textarea id="message" name="message" placeholder="Feel free to share any specific details regarding your request."></textarea>
     </div>
     <input type="submit" value="Submit">
-    <div style="margin-bottom: 20px;"></div>
+    <div style="margin-bottom: 40px;"></div>
   </form>
 </section>
 
