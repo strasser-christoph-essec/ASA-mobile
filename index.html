@@ -209,18 +209,24 @@ main h2 {
 
   /* Responsive styles for mobile screens */
   @media (max-width: 768px) {
-    .header-content {
-      flex-direction: column;
-    }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
 header h1{
     text-align: center; /* Optional: if you want to center-align each word */
     font-size: 22px; margin-left: 0px; margin-right: 0px; font-weight: bold;
   }
     #logo {
-        max-height: 100px; /* Smaller logo for mobile */
-        width: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Adjust if needed */
-    }
+    order: 1;
+    max-height: 100px;
+    align-self: flex-start; /* Aligns logo to the left */
+  }
+     #title-container {
+    order: 2;
+    width: 100%; /* Full width */
+    text-align: center; /* Center title */
+  }
     h2 {
   text-align: left; margin-top: 20px; margin-bottom: 20px /* or any other default alignment */
   /* other styles */
@@ -228,13 +234,11 @@ header h1{
 body {
       font-size: 18px; line-height:;
     }
-    .menu-toggle {
-      display: block;
-      position: absolute; /* Position it at the top right */
-      top: 0;
-      right: 0;
-      padding: 1rem 2rem;
-    }
+     .menu-toggle {
+    order: 3;
+    align-self: flex-end; /* Aligns menu toggle to the right */
+    padding: 1rem;
+  }
  .custom-text {
     margin-left: 0px; /* Adjust this value as needed for mobile */
 margin-right: 0px; text-align: justify;
@@ -328,14 +332,14 @@ footer {
 </script>
 <body>
 
-
-
 <header>
   <div class="header-content">
     <img src="logo.png" alt="ASA Logo" id="logo">
-    <h1>Authentic Sporting Arrangements</h1>
+    <div id="title-container">
+      <h1>Authentic Sporting Arrangements</h1>
+    </div>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
   </div>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
   <nav id="nav">
     <ul>
       <li><a href="index.html">Home</a></li>
