@@ -314,14 +314,23 @@ footer {
     "waterbuck.JPG"
   ];
 
-  function showNextImage() {
+ function showNextImage() {
     const imageContainer = document.getElementById('adventure-image-img');
     imageContainer.classList.remove('show');
-    imageContainer.src = images[currentImageIndex];
-    setTimeout(() => imageContainer.classList.add('show'), 50);
+    
+    // Update the data-src attribute instead of src for lazy loading
+    imageContainer.setAttribute('data-src', images[currentImageIndex]);
+    
+    // Load the image and add 'show' class when it's loaded
+    const loadImage = (image) => {
+        image.src = image.dataset.src;
+        image.onload = () => image.classList.add('show');
+    };
+
+    setTimeout(() => loadImage(imageContainer), 50);
     currentImageIndex = (currentImageIndex + 1) % images.length;
     setTimeout(showNextImage, 8000);
-  }
+}
 
   window.onload = function() {
     showNextImage();
