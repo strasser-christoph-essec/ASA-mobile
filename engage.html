@@ -486,13 +486,10 @@ function validateForm() {
 <!-- Contact Form Section -->
 <section id="contact" class="container">
   <h2>Request Consultation</h2>
-  <form id="contactForm" onsubmit="return validateForm()">
+  <form id="contactForm" action="https://formspree.io/f/mnqeqyjq" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="example@email.com" required>
-    </div>
-    <div id="successMessage" style="display:none;" class="alert">
-      <p>Thank you for contacting us! Your information has been well received, and a dedicated team member will contact you via your preferred details shortly.</p>
     </div>
     <div class="form-group">
       <label for="phone">Phone Number (optional):</label>
