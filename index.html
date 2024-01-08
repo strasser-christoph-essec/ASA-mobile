@@ -390,9 +390,10 @@ footer {
     </div>
     <div class="footer-section">
       <h3>Quick Links</h3>
-      <ul>
-        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-        <li><a href="impressum.html">Impressum</a></li> <!-- Consider moving the Impressum to a separate page -->
+      <ul style="list-style-type:none;">
+        <li><a href="terms-and-conditions.html" class="footer-link">Terms & Conditions</a></li>
+        <li><a href="data-protection-and-privacy.html" class="footer-link">Data Protection and Privacy</a></li>
+        <li><a href="impressum.html" class="footer-link">Impressum</a></li>
       </ul>
     </div>
   </div>
@@ -400,6 +401,20 @@ footer {
     <p>Copyright © 2023 Authentic Sporting Arrangements. All rights reserved.</p>
   </div>
 </footer>
+
+<style>
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+
+  .footer-link:hover, .footer-link:focus {
+    color: #00ff00; /* Change text color on hover to match the navigation bar */
+    background-color: transparent; /* Ensure no background color on hover */
+  }
+</style>
+
 
 
 
