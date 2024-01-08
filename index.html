@@ -382,22 +382,22 @@ footer {
 
 <footer>
   <div class="footer-top">
-    <div class="footer-section">
+    <div class="footer-section" style="text-align: center;">
       <h3>UK Contact</h3>
       <p>London road<br>
       London post code<br>
       United Kingdom</p>
     </div>
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <ul style="list-style-type:none;">
+    <div class="footer-section" style="text-align: center;">
+      <h3>Essential Links</h3> <!-- Changed from Quick Links -->
+      <ul style="list-style-type:none; padding: 0; margin: 0;">
         <li><a href="terms-and-conditions.html" class="footer-link">Terms & Conditions</a></li>
         <li><a href="data-protection-and-privacy.html" class="footer-link">Data Protection and Privacy</a></li>
         <li><a href="impressum.html" class="footer-link">Impressum</a></li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="footer-bottom" style="text-align: center;">
     <p>Copyright © 2023 Authentic Sporting Arrangements. All rights reserved.</p>
   </div>
 </footer>
@@ -407,6 +407,7 @@ footer {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    display: block; /* Make the links block level for better spacing and alignment */
   }
 
   .footer-link:hover, .footer-link:focus {
@@ -414,6 +415,7 @@ footer {
     background-color: transparent; /* Ensure no background color on hover */
   }
 </style>
+
 
 
 
