@@ -384,7 +384,7 @@ footer {
 <footer>
   <div class="footer-top">
     <div class="footer-section">
-      <h3>London Contact</h3>
+      <h3>UK Contact</h3>
       <p>London road<br>
       London post code<br>
       United Kingdom</p>
@@ -402,24 +402,32 @@ footer {
 </footer>
 
 <style>
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    padding: 20px; /* Adjust the padding as necessary */
+    flex: 1; /* This will ensure both sections take up equal space */
+    min-width: 0; /* This helps with handling overflow text in flex items */
+  }
+
   .footer-link {
     display: block; /* Makes each link occupy its own line */
     color: white;
     text-decoration: none;
-    padding: 0.5rem 0; /* Adds vertical padding to space out the links, adjust as needed */
-    padding-left: 20px; /* Indents the links to align with other content, adjust as needed */
+    padding: 0.5rem 0; /* Adds vertical padding to space out the links */
+    text-align: left; /* Align text to the left */
   }
 
   .footer-link:hover, .footer-link:focus {
     color: #00ff00; /* Change text color on hover */
     background-color: transparent; /* Removes any background color on hover */
   }
-
-  .footer-section {
-    text-align: left; /* Ensures that the text within the section is aligned to the left */
-    padding: 20px; /* Adds padding around the section */
-  }
 </style>
+
 
 
 
