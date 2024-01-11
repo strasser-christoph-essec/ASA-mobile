@@ -390,10 +390,13 @@ footer {
       United Kingdom</p>
     </div>
     <div class="footer-section">
-      <a href="data-protection-and-privacy.html" class="footer-link">Data Protection and Privacy</a>
-      <a href="terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
-      <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
-      <a href="impressum.html" class="footer-link">Impressum</a>
+      <div class="spacer" style="height: 2em;"></div> 
+      <ul style="list-style-type:none;">
+        <a href="data-protection-and-privacy.html" class="footer-link">Data Protection and Privacy</a>
+        <a href="terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+        <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
+        <a href="impressum.html" class="footer-link">Impressum</a>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
@@ -402,29 +405,15 @@ footer {
 </footer>
 
 <style>
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .footer-section {
-    padding: 20px; /* Adjust the padding as necessary */
-    flex: 1; /* This will ensure both sections take up equal space */
-    min-width: 0; /* This helps with handling overflow text in flex items */
-  }
-
   .footer-link {
-    display: block; /* Makes each link occupy its own line */
     color: white;
     text-decoration: none;
-    padding: 0.5rem 0; /* Adds vertical padding to space out the links */
-    text-align: left; /* Align text to the left */
+    padding: 0.5rem 1rem;
   }
 
   .footer-link:hover, .footer-link:focus {
-    color: #00ff00; /* Change text color on hover */
-    background-color: transparent; /* Removes any background color on hover */
+    color: #00ff00; /* Change text color on hover to match the navigation bar */
+    background-color: transparent; /* Ensure no background color on hover */
   }
 </style>
 
